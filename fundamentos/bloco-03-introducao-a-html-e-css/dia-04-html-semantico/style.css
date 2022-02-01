@@ -1,0 +1,33 @@
+.introducao {
+    background-color: cornflowerblue;
+    font-size: 18px;
+    text-align: justify;
+    margin: 25px;
+    
+}
+body {
+    margin: 20px;
+    background-color: rgb(173, 169, 169);
+}
+
+.foto {
+    position: absolute;
+    height: 300px;
+    margin-left: 200px;
+}
+
+.texto2 {
+    position: absolute;
+    width: 400px;
+    text-align: justify;
+    top: 300px;
+    margin-left: 650px;
+}
+
+.texto3 {
+    position: absolute;
+    width: 500px;
+    text-align: justify;
+    top: 300px;
+    margin-left: 1150px;
+}
