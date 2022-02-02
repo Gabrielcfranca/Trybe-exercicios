@@ -1,0 +1,15 @@
+h1, p{
+    text-align: center;
+}
+li:hover {
+    background-color: cadetblue;
+
+}
+li:active {
+    color:rgb(46, 139, 34);
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+ul {
+    list-style: none;
+}
