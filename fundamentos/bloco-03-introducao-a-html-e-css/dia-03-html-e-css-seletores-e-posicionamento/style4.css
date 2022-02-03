@@ -1,0 +1,15 @@
+div:hover {
+   border: 3px groove yellow;
+   background-color: #0000ff;
+}
+h3 {
+    font-size: 20px;
+    font-family: monospace;
+}
+#terceira {
+    font-size: 30px;
+}
+
+.ímpares{
+    font-style: italic;
+}
