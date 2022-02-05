@@ -32,7 +32,7 @@
 
 //exercícios do dia!
 
-// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // let impar =0;
 // let par =0;
 // for (var index=0; index < numbers.length; index +=1) {
@@ -70,12 +70,37 @@
 // for (let index = 0; index > numbers; index +=1) {
 //       console.log(numbers[index]);
 
+
 //      }
-let cont = 0;
-let div = 0;
-for (let index=0; index < 25; index+=1){
-     cont = cont +1;
-     console.log(cont);
-     div = cont/2;
-     console.log("Divisao dos elementos por 2 " + div);
-}
+
+let maior = 0;
+let menor =1000;
+
+// for (let index = 0; index < numbers.length; index +=1){
+   
+//     if (numbers[index] > maior) {
+//         maior = numbers[index];
+        
+//     }    
+// } 
+// console.log(maior);
+
+for (let index = 0; index < numbers.length; index +=1){
+   
+     if (numbers[index] < menor) {
+         menor = menor[index];
+         
+     }    
+ } 
+ console.log(menor);
+ 
+
+
+// let cont = 0;
+// let div = 0;
+// for (let index=0; index < 25; index+=1){
+//      cont = cont +1;
+//      console.log(cont);
+//      div = cont/2;
+//      console.log("Divisao dos elementos por 2 " + div);
+// }
