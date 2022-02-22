@@ -1,76 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-</head>
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  </head>
+  <body>
     <header>
-    <h1>Formulário para cadastro da TrybeTrip!</h1>
+      <h1>Formulário para cadastro da TrybeTrip!</h1>
     </header>
     <main>
-    <form action="" method="get">
+      <form action="" method="get">
         <div class="form-row">
-        <div class="line-content">
-        <fieldset class="legacy-form-row">
-            <legend>Cadastro</legend>
+          <div class="line-content">
+            <fieldset class="legacy-form-row">
+              <legend>Cadastro</legend>
+              <div>
+                <label for="fullname"
+                  >Nome Completo:
+                  <input
+                    class="form-control"
+                    id="fullname"
+                    type="text"
+                    name="fullname"
+                    placeholder="Insira seu nome!"
+                    required
+                    minlength="10"
+                    maxlength="40"
+                  />
+                </label>
+                <label for="email" class="form-label"
+                  >E-mail:
+                  <input
+                    class="form-control"
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Insira seu E-mail"
+                    required
+                    minlength="10"
+                    maxlength="50"
+                  />
+                </label>
+              </div>
+              <div>
+                <label for="city">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="lugar"
+                    id="city"
+                  />
+                  Cidade
+                </label>
+                <label for="campo">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="lugar"
+                    id="campo"
+                  />
+                  Campo
+                </label>
+                <label for="beach">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="lugar"
+                    id="beach"
+                  />
+                  Praia
+                </label>
+                <label for="Montanhas">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="lugar"
+                    id="Montanhas"
+                  />
+                  Montanhas
+                </label>
+              </div>
+              <div>
+                <p>Espaço para digitar a resposta:</p>
+                <textarea class="form-control" name="texto" id="text" cols="30" rows="10"></textarea>
+              </div>
+              <div>
+                <label for="data"
+                  >Qual a melhor data para realizar a sua viagem?
+                  <input type="date" name="data" id="data" />
+                </label>
+              </div>
+              <div>
+                <label for="acordo"
+                  >Gostaria de receber outras incríveis oportunidades oferecidas
+                  pela Trybe?
+                  <input type="checkbox" name="acordo" id="acordo" /> </label
+                ><br />
+                <label for="acordo2"
+                  >Concordo que imagens das minhas férias poderão ser usadas na
+                  divulgação de concursos futuros.
+                  <input type="checkbox" name="acordo2" id="acordo2" />
+                </label>
+              </div>
+            </fieldset>
             <div>
-            <label for="fullname">Nome Completo:
-                <input id="fullname" type="text" name="fullname" placeholder="Insira seu nome!" required minlength="10" maxlength="40">
-            </label>
-            <label for="email">E-mail:
-                <input id="email" type="email" name="email" placeholder="Insira seu E-mail" required minlength="10" maxlength="50">
-            </label></div>
-            <div>
-            <label for="city"> 
-                <input type="radio" name="lugar" id="city">
-                Cidade
-            </label>
-            <label for="campo"> 
-                <input type="radio" name="lugar" id="campo">
-                Campo
-            </label>
-            <label for="beach"> 
-                <input type="radio" name="lugar" id="beach">
-                Praia
-            </label>
-            <label for="Montanhas"> 
-                <input type="radio" name="lugar" id="Montanhas">
-                Montanhas
-            </label></div>
-            <div>
-            <p>Espaço para digitar a resposta:</p>
-            <textarea name="texto" id="text" cols="30" rows="10"></textarea>
+              <button
+                type="submit"
+                id="submitButton"
+                class="btn btn-outline-success"
+              >
+                Enviar
+              </button>
+              <button type="reset" class="btn btn-outline-warning">
+                Apagar
+              </button>
+            </div>
+          </div>
         </div>
-        <div>
-            <label for="data">Qual a melhor data para realizar a sua viagem? 
-                <input type="date" name="data" id="data">
-
-            </label>
-        </div>
-        <div>
-            <label for="acordo">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
-                <input type="checkbox" name="acordo" id="acordo">
-            </label><br>
-            <label for="acordo2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
-                <input type="checkbox" name="acordo2" id="acordo2">
-            </label>
-        </div>
-        </fieldset>
-        <div>
-        <button type="submit" id="submitButton">Enviar</button>
-        <button type="reset">Apagar</button>
-    </div>
-    </div>
-    </div>
-    </form>
-    <p id="nameUser"></p> <!-- paragrafo criado para receber o retorno do prevent default -->
-</main>
-<script src="script.js"></script>
-</body>
+      </form>
+      <p id="nameUser"></p>
+      <!-- paragrafo criado para receber o retorno do prevent default -->
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
