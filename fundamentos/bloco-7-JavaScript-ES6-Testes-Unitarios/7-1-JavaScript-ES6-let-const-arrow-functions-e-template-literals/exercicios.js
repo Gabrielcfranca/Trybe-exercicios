@@ -60,3 +60,35 @@ console.log(`${sortedArrayBonus}`);
  
  const fatorial = num => num > 1 ? num * fatorial(num - 1) : 1;
  console.log(fatorial(5));
+
+
+ function contWords (frase){ //criei uma funcao que recebe frase.
+   let words = frase.split(' '); //criei um variável para receber as palavras separadas
+   let maxLength = 0; //criei uma variável para receber o tamanho das palavras
+   let result = ''; //uma variavel para o resultado
+   
+   for (const word of words){ //um for que vai testar o indice word (q vai receber as palavras de words)
+     if (word.length > maxLength){ //se a palavra do indice for maior do que o tamanho daa palara já guardada segue
+       maxLength = word.length; // maxLength guarda a maior palavra
+       result = word; // result recebe a palavra q for maior.
+     }
+   }
+   return result; //retorna a maior palavra inserida no texto.
+ }
+ console.log(contWords("Antônio foi no banheiro e não sabemos o que aconteceu"));
+
+ const contWords = frase => {
+  let words = frase.split(' '); //criei um variável para receber as palavras separadas
+  let maxLength = 0; //criei uma variável para receber o tamanho das palavras
+  let result = ''; //uma variavel para o resultado
+  
+  for (const word of words){ //um for que vai testar o indice word (q vai receber as palavras de words)
+    if (word.length > maxLength){ //se a palavra do indice for maior do que o tamanho daa palara já guardada segue
+      maxLength = word.length; // maxLength guarda a maior palavra
+      result = word; // result recebe a palavra q for maior.
+    }
+  }
+  return result; //retorna a maior palavra inserida no texto.
+}
+console.log(contWords("Antônio foi no banheiro e não sabemos o que aconteceu"));
+
