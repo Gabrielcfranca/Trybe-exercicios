@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        const titulo = document.createElement('h1');
+        titulo.innerHTML = "Exercício 5.2 - JavaScript DOM";
+        document.body.appendChild(titulo);
+
+        const menu = document.createElement('main');
+        menu.className = 'main-content';
+        document.body.appendChild(menu);
+
+        const sessao = document.createElement('section');
+        sessao.className = 'center-content';
+        // sessao = document.getElementsByTagName('main').firstElementChild;
+        menu.appendChild(sessao);
+
+        const paragrafo = document.createElement('p');
+        paragrafo.innerHTML = "Inclusão de texto conforme solicitado pelo exercício do course.";
+        sessao.appendChild(paragrafo);
+
+        const sessaoEsquerda = document.createElement('section');
+        sessaoEsquerda.className = 'left-content';
+        menu.appendChild(sessaoEsquerda);
+
+        const sessaoDireita = document.createElement('section');
+        sessaoDireita.className = 'right-content';
+        menu.appendChild(sessaoDireita);
+
+        const imagem = document.createElement('img');
+        imagem.className = 'small-image';
+        imagem.src = 'https://picsum.photos/200';
+        sessaoEsquerda.appendChild(imagem);
+
+        const listNaoOrdenada = document.createElement('ul');
+        sessaoDireita.appendChild(listNaoOrdenada);
+        const numbers = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+          for(let index in numbers){
+              const itens = document.createElement('li');
+              itens.innerHTML = numbers[index];
+              listNaoOrdenada.appendChild(itens);
+          }
+          
+        for (let index = 1; index <= 3; index += 1) {
+        const elementH3 = document.createElement('h3');
+        elementH3.innerHTML = 'Show ' + index;
+        menu.appendChild(elementH3);
+      }
+          
+      
+
+
+      
+
+
+
+
+        // let primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+        // let filhoDoPrimeiroFilhoDoFilho = document.createElement('section');
+        // filhoDoPrimeiroFilhoDoFilho.id = 'filhoDoPrimeiroFilhoDoFilho';
+        // primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho);
+
+    </script>
+  </body>
+</html>
