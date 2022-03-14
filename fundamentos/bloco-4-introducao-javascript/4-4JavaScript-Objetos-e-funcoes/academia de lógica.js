@@ -59,4 +59,3 @@ let word = '';
 let end = '';
 
 }
-
