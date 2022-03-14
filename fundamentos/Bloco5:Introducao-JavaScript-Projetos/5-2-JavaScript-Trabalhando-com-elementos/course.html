@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+<script>
+
+
+
+// let pai = elementoOndeVoceEsta.parentElement;
+// pai.style.color = 'red';
+
+// let primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+// primeiroFilhoDoFilho.innerText = "Texto solicitado pelo exercício de número 3 do dia 5.2."
+
+// let primeiroFilho = pai.firstElementChild;
+
+// let primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
+
+// let texto = elementoOndeVoceEsta.nextSibling;
+
+// let terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+
+// let terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+
+const pai = document.getElementById('pai');
+const irmaoOndeEstou = document.createElement('section');
+irmaoOndeEstou.id = "irmaoOndeEstou";
+
+pai.appendChild(irmaoOndeEstou);
+
+let elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+let filhoOndeVoceEsta = document.createElement('section');
+filhoOndeVoceEsta.id = 'filhoOndeVoceEsta';
+
+elementoOndeVoceEsta.appendChild(filhoOndeVoceEsta);
+
+let primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+let filhoDoPrimeiroFilhoDoFilho = document.createElement('section');
+filhoDoPrimeiroFilhoDoFilho.id = 'filhoDoPrimeiroFilhoDoFilho';
+primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho);
+
+let terceiroFilho = filhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
+terceiroFilho.id = 'terceiroFilho';
+
+</script>
+</body>
+</html>

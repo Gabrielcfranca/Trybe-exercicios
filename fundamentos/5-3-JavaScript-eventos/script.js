@@ -1,3 +1,4 @@
+
 function createDaysOfTheWeek() {
     const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
     const weekDaysList = document.querySelector('.week-days');
@@ -57,4 +58,12 @@ newButton.id = newButtonId
 
 } holidays()
 
+function digaOla(nome){
+    console.log("Ola " + nome);
+}
+digaOla('Gabriel');
+
+let input = document.querySelector('o que eu quero puxar')
+
+input.addEventListener('input')
 
