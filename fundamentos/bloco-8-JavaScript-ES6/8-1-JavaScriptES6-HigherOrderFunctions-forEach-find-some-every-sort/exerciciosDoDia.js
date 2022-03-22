@@ -35,3 +35,32 @@ return callback (myNumber, number) ? 'Tente novamente' : 'Parabéns você ganhou
 
 
 console.log(sorteio(2, numberCheck));
+
+// hof que receberá três parametros
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+
+const checkAnswers = (rightAnswers, studentAnswers) => {
+  if (rightAnswers === studentAnswers){
+    return 1;
+  }
+  if (rightAnswers !== studentAnswers){
+    return -0.5;
+  }
+  if (studentAnswers === 'N.A'){
+    return 0;
+  }
+};
+const resultAnswers = (rightAnswers, studentAnswers, action) => {
+let contador = 0;
+for (let index = 0; index < rightAnswers.length; index++) {
+  const actionReturn = action(rightAnswers[index], studentAnswers[index]);
+  contador += 1;
+}
+return `Resultado Final: ${contador} pontos`;
+};
+
+
+console.log(resultAnswers(RIGHT_ANSWERS, STUDENT_ANSWERS, checkAnswers));
