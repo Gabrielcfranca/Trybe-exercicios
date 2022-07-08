@@ -20,3 +20,5 @@ docker rmi -f ID_DO_CONTAINER
 para subir um docker-compose
 docker-compose up -d
 
+comando para forçar a buildar novamente.
+docker-compose up -d --build
