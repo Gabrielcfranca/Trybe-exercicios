@@ -37,4 +37,3 @@ volumes:
 networks:
   rede-virtual-1:
   rede-virtual-2:
-  
