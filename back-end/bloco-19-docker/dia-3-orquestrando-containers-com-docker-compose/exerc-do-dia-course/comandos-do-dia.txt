@@ -1,0 +1,24 @@
+docker run -d --name apache-server -p 4545:80 -v "/home/gabriel/Documentos/Trybe/Trybe-exercicios/back-end/bloco-19-docker/dia-3-orquestrando-containers-com-docker-compose/exerc-do-dia-course:/usr/local/apache2/htdocs/" httpd:2.4
+
+dessa forma fica mais fácil
+docker run -d --name apache-server -p 4545:80 -v "$(pwd)/missao_trybe.html:/usr/local/apache2/htdocs/" httpd:2.4
+
+ID container 3e32afa8b490
+
+quando pedir para obter o Mounts através da propriedade Source para visualizar o volume do container no Docker Host, utilize:
+docker inspect ID_DO_CONTAINER
+
+remover container
+docker rm ID_DO_CONTAINER
+
+para container
+docker stop ID_DO_CONTAINER
+
+remover a imagem gerada pelo servidor
+docker rmi -f ID_DO_CONTAINER
+
+para subir um docker-compose
+docker-compose up -d
+
+comando para forçar a buildar novamente.
+docker-compose up -d --build
