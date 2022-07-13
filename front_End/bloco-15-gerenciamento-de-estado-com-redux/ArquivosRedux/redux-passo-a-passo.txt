@@ -1,0 +1,17 @@
+Segue o fluxo para usar o redux-thunk em uma aplicação:
+
+1. Instalar o redux-thunk através do npm
+2. Importar a função applyMiddleware do Redux
+3. Importar a função thunk do redux-thunk
+4. Criar a store passando a função applyMiddleware(thunk) como parâmetro.
+
+Ordem correta do fluxo do redux-thunk, considerando o disparo da ação pela interface até sua atualização na mesma:
+
+1. Pessoa usuária executa a ação na interface, chamando a action
+6. A action dispara seu dispatch
+5. O redux-thunk captura a action, agindo como middleware
+7. O redux-thunk comunica-se com a API, aguardando sua resposta
+2. O redux-thunk envia a resposta para o reducer correto
+3. O reducer pega o estado atual da store e o modifica, de acordo com a action
+4. A store é modificada
+8. A interface é atualizada
