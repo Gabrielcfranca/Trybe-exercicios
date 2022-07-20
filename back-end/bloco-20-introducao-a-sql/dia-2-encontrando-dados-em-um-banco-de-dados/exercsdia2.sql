@@ -1,0 +1,11 @@
+USE sakila;
+SELECT * FROM city;
+SELECT first_name, last_name FROM sakila.customer;
+SELECT * FROM sakila.rental;
+SELECT title, description, release_year FROM sakila.film;
+SELECT * FROM sakila;
+SELECT * FROM sakila.actor;
+SELECT concat(first_name, ' ', last_name) AS 'nome_completo' FROM sakila.actor;
+SELECT concat(title, ' ', release_year) AS 'lancamento_do_filme' FROM sakila.film;
+SELECT CONCAT(title, ' ',  rating) AS 'classificacao' FROM sakila.film;
+SELECT CONCAT(address, ' ', district) AS 'endereço' FROM sakila.address;
